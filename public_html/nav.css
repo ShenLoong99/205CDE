@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 13, 2019, 8:53:10 AM
+    Author     : Asus
+*/
+
+body {
+    background-image: url(WEBSITE-WOOD-BACKGROUND.jpg);
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0;
+}
+
+.head {
+    background-color: #333;
+    opacity: 0.7;
+    margin-bottom: -16px;
+    margin-top: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #62c1f0; 
+    overflow: hidden;
+    padding: 0px;
+}
+
+nav ul li {
+    float: left;
+    width: 25%;
+    diplay: inline;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+nav ul li a:hover:not(.active) {
+    background-color: #fff;
+    color: #333;
+}
+
+.active {
+    background-color: #fff;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    bottom: 0%;
+}

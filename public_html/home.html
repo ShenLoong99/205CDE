@@ -9,51 +9,101 @@ and open the template in the editor.
         <title>Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images1.png">
+        <link href="nav.css" rel="stylesheet" type="text/css">
+        <style>
+            table {
+                background-color: #fff;
+            }
+            
+            .product {
+                height: auto;
+                display: block;
+                width: 230px;
+                background-color: dodgerblue;
+                border-radius: 15px;
+                display: inline-block;
+                padding: 10px;
+            }
+            
+            .product img {
+                height: 200px; 
+                width: 200px;
+                margin-top: 20px;
+                border-radius: 15px;
+            }
+            
+            h4 {
+                color: #fff;
+            }
+            
+            p {
+                color: #fff;
+                font-weight: bold;
+            }
+            
+            span {
+                font-weight: bold;
+            }
+            
+            center {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            
+            button {
+                border: none;
+                outline: 0;
+                padding: 10px;
+                color: #333;
+                background-color: #fff;
+                text-align: center;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+            
+            button:hover {
+                background-color: #333;
+                color: #fff;
+            }
+        </style>
     </head>
     <body>
-        <h1><b>Home</b></h1>
+        <center class="head"><a href="home.html"><img src="logo-web white-284x152.png" alt="logo"></a></center>
 	<nav>
-		<div>
-			<a href="home.html">Home</a>
-			<a href="contactUs.html">Contact Us</a>
-			<a href="login.html">Login</a>
-			<a href="register.html">Register</a>
-		</div>
-	</nav>
-	<table border="1">
-		<tr>
-			<td>Name</td>
-			<td>Description</td>
-			<td>Price</td>
-		</tr>
-		<tr>
-			<td>DARK TRANSVAAL SHAMPOO WITH ORGANIC AFRICAN BLACK SOAP</td>
-			<td>Our Organic African Black Soap Shampoo series range with 20% Organic Shea Butter makes hair super smooth, silky 
-			and shiny by its extreme moisturising and conditioning properties. Formulated and manufactured in Leeds, England. 
-			Scented with Dark Transvaal perfume oil, which is classified as a sharp, spicy, lavender, amber fragrance. This 
-			masculine scent possesses a blend of lavender, citrus, spicy berries and sandalwood. INCI: Aqua, Organic Shea Butter, 
-			Potash, Cocos Nucifera, Sodium Laureth Sulphate, Propylene Glycol, Sodium Chloride, Cocamine Oxide, Cocamidopropyl Betaine, 
-			Citric Acid, Tetrasodium EDTA, Polyquarternium-7, Fragrance. </td>
-			<td>RM25.00</td>		
-		</tr>
-		<tr>
-			<td>AUSTRALIAN TEA TREE ORGANIC SHAMPOO</td>
-			<td>Our certified organic shampoo is fragranced with Essential Oils to gently wash and condition your hair and scalp. 
-			A true liquid Shampoo of Organic Vegetable Oil origin, enriched with Aloe Vera. Certified by the Soil Association. 
-			It's free from Sulfates, SLS, SLES and parabens. Scented with Australian Tea Tree essential oil. Formulated and manufactured 
-			in Leeds, England. INCI: Aqua, Decyl Glucoside, Lauryl Betaine, Australian Tea Tree Essential Oil, Xantham Gum, Aloe Vera Leaf 
-			Juice Powder, Phenoxyethanol, Citric Acid, Benzoic Acid, Dehydroacetic Acid.</td>
-			<td>RM38.00</td>
-		</tr>
-		<tr>
-			<td>ENGLISH LAVENDER ORGANIC SHAMPOO</td>
-			<td>Our certified organic shampoo is fragranced with Essential Oils to gently wash and condition your hair and scalp. 
-			A true liquid Shampoo of Organic Vegetable Oil origin, enriched with Aloe Vera. Certified by the Soil Association. It's 
-			free from Sulfates, SLS, SLES and parabens. Scented with lavender essential oil. Formulated and manufactured in Leeds, 
-			England. INCI: Aqua, Decyl Glucoside, Lauryl Betaine, Lavender Essential Oil, Xantham Gum, Aloe Vera Leaf Juice Powder, 
-			Phenoxyethanol, Citric Acid, Benzoic Acid, Dehydroacetic Acid.</td>
-			<td>RM38.00</td>
-		</tr>
-	</table>
+            <ul>
+                <li><a href="home.html" class="active"><b>Home</b></a></li>
+                <li><a href="contactUs.html"><b>Contact Us</b></a></li>
+                <li><a href="login.html"><b>Login</b></a></li>
+                <li><a href="register.html"><b>Register</b></a></li>
+            </ul>
+        </nav>
+        <div class="catalog">
+            <center>
+                <div class="product">
+                    <img src="ORGANIC NATURAL SHEA BUTTER GHANA AFRICA PURE REFINED SEMI REFINED IMPORTED-800x800.jpg" alt="product">
+                    <h4>SHEA BUTTER, ORGANIC, SEMI REFINED</h4><p>RM46.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product" style="margin-left: 150px;">
+                    <img src="ALOE VERA GEL-800x800.jpg" alt="product">
+                    <h4>ORGANIC ALOE VERA GEL</h4><p>RM60.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product" style="margin-left: 150px;">
+                    <img src="Lemongrass Massage Oil-800x800.jpg" alt="product">
+                    <h4>BATH, BODY & MASSAGE OIL - LEMONGRASS</h4><p>RM48.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </center>
+        </div>
+        <br>
+        <footer> 
+            Address: 22, Lebuh Lembah Permai 4, Tanjung Tokong, 11200 George Town, Pulau Pinang<br>
+            Phone: 04-899 2980<br>
+            Email : info@thesoapcellar.com.my
+        </footer>
     </body>
 </html>
