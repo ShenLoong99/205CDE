@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images1.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/nav.css" rel="stylesheet" type="text/css">
+        <style>
+            label {
+                color: #fff;
+            }
+            
+            /* Style inputs with type="text", select elements and textareas */
+            input[type=text], select, textarea {
+              width: 100%; /* Full width */
+              padding: 12px; /* Some padding */ 
+              border: 1px solid #ccc; /* Gray border */
+              border-radius: 4px; /* Rounded borders */
+              box-sizing: border-box; /* Make sure that padding and width stays in place */
+              margin-top: 6px; /* Add a top margin */
+              margin-bottom: 16px; /* Bottom margin */
+              resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+            }
+
+            /* Style the submit button with a specific background color etc */
+            input[type=submit] {
+              background-color: dodgerblue;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+              opacity: 0.8;
+            }
+
+            /* Add a background color and some padding around the form */
+            .container {
+              border-radius: 5px;
+              padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <center class="head"><a href="home.html"><img src="logo-web white-284x152.png" alt="logo"></a></center>
+	<nav>
+            <ul>
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="contactUs.html" class="active"><b>Contact Us</b></a></li>
+                <li><a href="login.html"><b>Login</b></a></li>
+                <li><a href="register.html"><b>Register</b></a></li>
+            </ul>
+        </nav>
+	<div class="container">
+            <form action="action_page.php">
+
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name">
+
+              <label for="phNo">Phone Number</label>
+              <input type="text" id="phNo" name="phNo" placeholder="Enter phone number">
+              
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Enter email address">
+
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+              <input type="submit" value="Submit">
+
+            </form>
+        </div>
+	<footer>
+            Address: 22, Lebuh Lembah Permai 4, Tanjung Tokong, 11200 George Town, Pulau Pinang<br>
+            Phone: 04-899 2980<br>
+            Email : info@thesoapcellar.com.my
+	</footer>
+    </body>
+</html>

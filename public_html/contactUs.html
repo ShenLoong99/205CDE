@@ -9,80 +9,124 @@ and open the template in the editor.
         <title>Contact Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images1.png">
-        <link href="nav.css" rel="stylesheet" type="text/css">
-        <style>
-            label {
-                color: #fff;
-            }
-            
-            /* Style inputs with type="text", select elements and textareas */
-            input[type=text], select, textarea {
-              width: 100%; /* Full width */
-              padding: 12px; /* Some padding */ 
-              border: 1px solid #ccc; /* Gray border */
-              border-radius: 4px; /* Rounded borders */
-              box-sizing: border-box; /* Make sure that padding and width stays in place */
-              margin-top: 6px; /* Add a top margin */
-              margin-bottom: 16px; /* Bottom margin */
-              resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-            }
-
-            /* Style the submit button with a specific background color etc */
-            input[type=submit] {
-              background-color: dodgerblue;
-              color: white;
-              padding: 12px 20px;
-              border: none;
-              border-radius: 4px;
-              cursor: pointer;
-            }
-
-            /* When moving the mouse over the submit button, add a darker green color */
-            input[type=submit]:hover {
-              opacity: 0.8;
-            }
-
-            /* Add a background color and some padding around the form */
-            .container {
-              border-radius: 5px;
-              padding: 20px;
-            }
-        </style>
+        <link rel="icon" href="picture/images1.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
-        <center class="head"><a href="home.html"><img src="logo-web white-284x152.png" alt="logo"></a></center>
-	<nav>
-            <ul>
-                <li><a href="home.html"><b>Home</b></a></li>
-                <li><a href="contactUs.html" class="active"><b>Contact Us</b></a></li>
-                <li><a href="login.html"><b>Login</b></a></li>
-                <li><a href="register.html"><b>Register</b></a></li>
-            </ul>
-        </nav>
-	<div class="container">
-            <form action="action_page.php">
-
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name">
-
-              <label for="phNo">Phone Number</label>
-              <input type="text" id="phNo" name="phNo" placeholder="Enter phone number">
-              
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" placeholder="Enter email address">
-
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-              <input type="submit" value="Submit">
-
+    <body style="background: url(picture/WEBSITE-WOOD-BACKGROUND.jpg)">
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+            <form class="form-inline">
+                <button class="btn btn-info btn-md my-2 my-sm-0 ml-3" type="submit"><i class="fa fa-search"></i></button>
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
             </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="container text-center">
+            <a href="home.html" title="The Soap Cellar Sdn Bhd">
+                <img src="picture/logo-web white-284x152.png" alt="logo">
+            </a>
         </div>
-	<footer>
-            Address: 22, Lebuh Lembah Permai 4, Tanjung Tokong, 11200 George Town, Pulau Pinang<br>
-            Phone: 04-899 2980<br>
-            Email : info@thesoapcellar.com.my
-	</footer>
+        
+        <section class="container text-white bg-dark" style="border-radius: 10px;">
+            <div class="container"><br>
+            <h3 class="text-center">Contact us</h3><br />
+
+            <div class="row">
+              <div class="col-md-8">
+                  <form action="/post" method="post">
+                    <input class="form-control" name="name" placeholder="Name..." /><br />
+                    <input class="form-control" name="phone" placeholder="Phone..." /><br />
+                    <input class="form-control" name="email" placeholder="E-mail..." /><br />
+                    <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
+                    <input class="btn" style="background: #459ba7; color: #fff;" type="submit" value="Send" /><br /><br />
+                  </form>
+              </div>
+              <div class="col-md-4">
+                <b>Customer service:</b> <br />
+                Phone: +60 19 593 7799<br />
+                E-mail: <a href="mailto:dkhl@gmail.com">dkhl@gmail.com</a><br />
+                <br /><br />
+                <b>Shop Location:</b><br />
+                22 & 22-1 Lbh Lembah Permai 4<br />
+                Tanjung Bungah<br />
+                11200 Penang, Malaysia<br />
+                Phone: +60 (0) 4 899 2980<br />
+                <a href="mailto:info@thesoapcellar.com.my">info@thesoapcellar.com.my</a><br />
+              </div>
+            </div>
+            </div>
+        </section>
+        <br>
+        <footer class="page-footer bg-dark d-flex flex-column">
+          <div class="container text-center text-md-left">
+            <div class="row">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">About Us</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <p class="text-white">The Soap Cellar is a small family run business with a tradition of giving great products, 
+                    good value for money and the most trusted service. The Soap Cellar prides itself in ensuring 
+                    all the goods sold exceed all the requirements of international standards and in the future, 
+                    hope to possibly be a leading benchmark for others to follow.
+                </p>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">How to get hold of us</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled text-white">
+                  <li><a href="#" class="text-white">Telephone Number<br/><b>+60 (0) 4 899 2980</b></a></li>
+                  <li>Address<br/><b>22 & 22-1 Lbh Lembah Permai 4<br/>Tanjung Bungah<br/>11200 Penang, Malaysia</b></li>
+                  <li>Fax Number<br/><b>+60 (0) 4 898 2980</b></li>
+                  <li><a href="#" class="text-white">e-Mail Address<br/><b>info@thesoapcellar.com.my</b></a></li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Information</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">About Us</a></li>
+                  <li><a href="#" class="text-white">Delivery Information</a></li>
+                  <li><a href="#" class="text-white">Privacy Policy</a></li>
+                  <li><a href="#" class="text-white">Terms and Conditions</a></li>
+                  <li><a href="#" class="text-white">Contact Us</a></li>
+                  <li><a href="#" class="text-white">SiteMap</a></li>
+                  <li><a href="#" class="text-white">Newsletter</a></li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Operating Hours</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled text-white">
+                  <li><small>Monday - 11am - 8pm</small></li>
+                  <li><small>Tuesday - CLOSED</small></li>
+                  <li><small>Wednesday - 11am - 8pm</small></li>
+                  <li><small>Thursday - 11am - 8pm</small></li>
+                  <li><small>Friday - 11am - 8pm</small></li>
+                  <li><small>Saturday - 11am - 8pm</small></li>
+                  <li><small>Sunday - CLOSED</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright text-center py-3 bg-dark text-white">
+              © 2019 Copyright: Tan Si Kai. All rights reserved.
+          </div>
+        </footer>
     </body>
 </html>

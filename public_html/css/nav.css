@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 body {
-    background-image: url(WEBSITE-WOOD-BACKGROUND.jpg);
+    background-image: url(../WEBSITE-WOOD-BACKGROUND.jpg);
     font-family: Verdana, Arial, sans-serif;
     margin: 0;
 }
@@ -17,7 +17,6 @@ body {
 .head {
     background-color: #333;
     opacity: 0.7;
-    margin-bottom: -16px;
     margin-top: 0px;
 }
 
@@ -46,11 +45,16 @@ nav ul li a {
 nav ul li a:hover:not(.active) {
     background-color: #fff;
     color: #333;
+    text-decoration: none;
 }
 
 .active {
     background-color: #fff;
     color: #333;
+}
+
+.active:hover {
+    text-decoration: none;
 }
 
 footer {

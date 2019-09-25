@@ -9,107 +9,200 @@ and open the template in the editor.
         <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images1.png">
-        <link href="nav.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="picture/images1.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            label {
-                color: #fff;
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
             }
+            .user_card {
+                height: 400px;
+                width: 400px;
+                margin-top: 80px;
+                margin-bottom: auto;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 15px;
 
-            /* Full-width inputs */
-            input[type=text], input[type=password] {
-              width: 100%;
-              padding: 12px 20px;
-              margin: 8px 0;
-              display: inline-block;
-              border: 1px solid #ccc;
-              box-sizing: border-box;
             }
-
-            /* Set a style for all buttons */
-            button {
-              background-color: dodgerblue;
-              color: white;
-              padding: 14px 20px;
-              margin: 8px 0;
-              border: none;
-              cursor: pointer;
-              width: 100%;
-              font-size: medium;
+            .brand_logo_container {
+                position: absolute;
+                top: -75px;
+                border-radius: 30%;
+                background: #60a3bc;
+                padding: 10px;
+                text-align: center;
             }
-
-            /* Add a hover effect for buttons */
-            button:hover {
-              opacity: 0.9;
+            .brand_logo {
+                border-radius: 30%;
+                border: 2px solid white;
             }
-
-            /* Extra style for the cancel button (red) */
-            .cancelbtn {
-              width: auto;
-              padding: 10px 18px;
-              background-color: #f44336;
+            .form_container {
+                margin-top: 100px;
             }
-
-            /* Center the avatar image inside this container */
-            .imgcontainer {
-              text-align: center;
-              margin: 24px 0 12px 0;
+            .login_btn {
+                width: 100%;
             }
-
-            /* Avatar image */
-            img.avatar {
-              width: 15%;
-              border-radius: 10%;
+            .login_btn:focus {
+                box-shadow: none !important;
+                outline: 0px !important;
             }
-
-            /* Add padding to containers */
-            .container {
-              padding: 16px;
+            .login_container {
+                padding: 0 2rem;
             }
-            
-            .container a {
-                color: dodgerblue;
+            .input-group-text {
+                background: #60a3bc;
+                color: white;
+                border: 0;
+                border-radius: 0.25rem 0 0 0.25rem !important;
             }
-            
-            p {
-                color: #fff;
-                margin-top: 5px;
-                padding-bottom: 5px;
+            .input_user,
+            .input_pass:focus {
+                box-shadow: none !important;
+                outline: 0px !important;
+            }
+            .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+                background-color: #60a3bc !important;
             }
         </style>
     </head>
-    <body>
-        <center class="head"><a href="home.html"><img src="logo-web white-284x152.png" alt="logo"></a></center>
-	<nav>
-            <ul>
-                <li><a href="home.html"><b>Home</b></a></li>
-                <li><a href="contactUs.html"><b>Contact Us</b></a></li>
-                <li><a href="login.html" class="active"><b>Login</b></a></li>
-                <li><a href="register.html"><b>Register</b></a></li>
-            </ul>
+    <body style="background: url(picture/WEBSITE-WOOD-BACKGROUND.jpg)">
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+            <form class="form-inline">
+                <button class="btn btn-info btn-md my-2 my-sm-0 ml-3" type="submit"><i class="fa fa-search"></i></button>
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                <li class="nav-item active"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+              </ul>
+            </div>
         </nav>
-	<form action="action_page.php">
-            <div class="imgcontainer">
-                <img src="images.png" alt="Logo" class="avatar">
+        <br>
+        <section>
+            <div class="container h-100 text-white">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="user_card bg-dark">
+                        <div class="d-flex justify-content-center">
+                            <div class="brand_logo_container">
+                                <img width="284" height="152" src="picture/logo-web white-284x152.png" class="brand_logo" alt="Logo">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center form_container">
+                            <form>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" name="" class="form-control input_user" value="" placeholder="username">
+                                </div>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                        <label class="custom-control-label" for="customControlInline">Remember me</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <button type="button" name="button" class="btn login_btn btn-info">Login</button>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-center links">
+                                Don't have an account? <a href="register.html" class="ml-2">Sign Up</a>
+                            </div>
+                            <div class="d-flex justify-content-center links">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit">Login</button>
-                <p><span style="float: left;">No account? <a href="register.html">Register now</a>!</span>
-                    <span style="float: right;">Forgot <a href="#">password</a>?</span></p>
+        </section>
+        <br>
+        <footer class="page-footer bg-dark d-flex flex-column">
+          <div class="container text-center text-md-left">
+            <div class="row">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">About Us</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <p class="text-white">The Soap Cellar is a small family run business with a tradition of giving great products, 
+                    good value for money and the most trusted service. The Soap Cellar prides itself in ensuring 
+                    all the goods sold exceed all the requirements of international standards and in the future, 
+                    hope to possibly be a leading benchmark for others to follow.
+                </p>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">How to get hold of us</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled text-white">
+                  <li><a href="#" class="text-white">Telephone Number<br/><b>+60 (0) 4 899 2980</b></a></li>
+                  <li>Address<br/><b>22 & 22-1 Lbh Lembah Permai 4<br/>Tanjung Bungah<br/>11200 Penang, Malaysia</b></li>
+                  <li>Fax Number<br/><b>+60 (0) 4 898 2980</b></li>
+                  <li><a href="#" class="text-white">e-Mail Address<br/><b>info@thesoapcellar.com.my</b></a></li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Information</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">About Us</a></li>
+                  <li><a href="#" class="text-white">Delivery Information</a></li>
+                  <li><a href="#" class="text-white">Privacy Policy</a></li>
+                  <li><a href="#" class="text-white">Terms and Conditions</a></li>
+                  <li><a href="#" class="text-white">Contact Us</a></li>
+                  <li><a href="#" class="text-white">SiteMap</a></li>
+                  <li><a href="#" class="text-white">Newsletter</a></li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Operating Hours</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled text-white">
+                  <li><small>Monday - 11am - 8pm</small></li>
+                  <li><small>Tuesday - CLOSED</small></li>
+                  <li><small>Wednesday - 11am - 8pm</small></li>
+                  <li><small>Thursday - 11am - 8pm</small></li>
+                  <li><small>Friday - 11am - 8pm</small></li>
+                  <li><small>Saturday - 11am - 8pm</small></li>
+                  <li><small>Sunday - CLOSED</small></li>
+                </ul>
+              </div>
             </div>
-        </form>
-        
-        <footer>
-            Address: 22, Lebuh Lembah Permai 4, Tanjung Tokong, 11200 George Town, Pulau Pinang<br>
-            Phone: 04-899 2980<br>
-            Email : info@thesoapcellar.com.my
-	</footer>
+          </div>
+          <div class="footer-copyright text-center py-3 bg-dark text-white">
+              © 2019 Copyright: Tan Si Kai. All rights reserved.
+          </div>
+        </footer>
     </body>
 </html>

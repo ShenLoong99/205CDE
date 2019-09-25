@@ -9,101 +9,138 @@ and open the template in the editor.
         <title>Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images1.png">
-        <link href="nav.css" rel="stylesheet" type="text/css">
-        <style>
-            table {
-                background-color: #fff;
-            }
-            
-            .product {
-                height: auto;
-                display: block;
-                width: 230px;
-                background-color: dodgerblue;
-                border-radius: 15px;
-                display: inline-block;
-                padding: 10px;
-            }
-            
-            .product img {
-                height: 200px; 
-                width: 200px;
-                margin-top: 20px;
-                border-radius: 15px;
-            }
-            
-            h4 {
-                color: #fff;
-            }
-            
-            p {
-                color: #fff;
-                font-weight: bold;
-            }
-            
-            span {
-                font-weight: bold;
-            }
-            
-            center {
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-            
-            button {
-                border: none;
-                outline: 0;
-                padding: 10px;
-                color: #333;
-                background-color: #fff;
-                text-align: center;
-                cursor: pointer;
-                font-size: 14px;
-                font-weight: bold;
-                border-radius: 10px;
-            }
-            
-            button:hover {
-                background-color: #333;
-                color: #fff;
-            }
-        </style>
+        <link rel="icon" href="picture/images1.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
-        <center class="head"><a href="home.html"><img src="logo-web white-284x152.png" alt="logo"></a></center>
-	<nav>
-            <ul>
-                <li><a href="home.html" class="active"><b>Home</b></a></li>
-                <li><a href="contactUs.html"><b>Contact Us</b></a></li>
-                <li><a href="login.html"><b>Login</b></a></li>
-                <li><a href="register.html"><b>Register</b></a></li>
-            </ul>
-        </nav>
-        <div class="catalog">
-            <center>
-                <div class="product">
-                    <img src="ORGANIC NATURAL SHEA BUTTER GHANA AFRICA PURE REFINED SEMI REFINED IMPORTED-800x800.jpg" alt="product">
-                    <h4>SHEA BUTTER, ORGANIC, SEMI REFINED</h4><p>RM46.00</p>
-                    <button>Add to Cart</button>
+    <body style="background: url(picture/WEBSITE-WOOD-BACKGROUND.jpg)">
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
+            <form class="form-inline">
+                <button class="btn btn-info btn-md my-2 my-sm-0 ml-3" type="submit"><i class="fa fa-search"></i></button>
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 </div>
-                <div class="product" style="margin-left: 150px;">
-                    <img src="ALOE VERA GEL-800x800.jpg" alt="product">
-                    <h4>ORGANIC ALOE VERA GEL</h4><p>RM60.00</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product" style="margin-left: 150px;">
-                    <img src="Lemongrass Massage Oil-800x800.jpg" alt="product">
-                    <h4>BATH, BODY & MASSAGE OIL - LEMONGRASS</h4><p>RM48.00</p>
-                    <button>Add to Cart</button>
-                </div>
-            </center>
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+              </ul>
+            </div>
+          </nav>
+        <div class="container text-center">
+            <a href="home.html" title="The Soap Cellar Sdn Bhd">
+                <img src="picture/logo-web white-284x152.png" alt="logo">
+            </a>
         </div>
-        <br>
-        <footer> 
-            Address: 22, Lebuh Lembah Permai 4, Tanjung Tokong, 11200 George Town, Pulau Pinang<br>
-            Phone: 04-899 2980<br>
-            Email : info@thesoapcellar.com.my
+        <div class="navbar navbar-expand-sm justify-content-center sticky-top" style="background-color: #459ba7;">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link text-white" href="">FACE CARE</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="">BATH & BODY</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="">HAIR CARE</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="">OILS</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="">RAW MATERIALS</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="">MISCELLANEOUS</a></li>
+            </ul>
+        </div>
+        <section class="container container mt-4 mb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-dark">
+                        <img class="img-fluid" src="picture/ALOE VERA GEL-800x800.jpg" alt="ALOE VERA GEL">
+                        <div class="card-block p-3 text-white">
+                            <h4 class="card-title">Aloe Vera Gel</h4>
+                            <p class="card-text">When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <a href="#" class="btn btn-info rounded-0 mb-2">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark">
+                        <img class="img-fluid" src="picture/BEESWAX - REFINED-800x800.jpg" alt="BEESWAX - REFINED">
+                        <div class="card-block p-3 text-white">
+                            <h4 class="card-title">Beeswax - Refined</h4>
+                            <p class="card-text">When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <a href="#" class="btn btn-info rounded-0 mb-2">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark">
+                        <img class="img-fluid" src="picture/Lemongrass Massage Oil-800x800.jpg" alt="Lemongrass Massage Oil">
+                        <div class="card-block p-3 text-white">
+                            <h4 class="card-title">Lemongrass Massage Oil</h4>
+                            <p class="card-text">When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <a href="#" class="btn btn-info rounded-0 mb-2">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="page-footer bg-dark d-flex flex-column sticky-footer-wrapper">
+          <div class="container text-center text-md-left">
+            <div class="row">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">About Us</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <p class="text-white">The Soap Cellar is a small family run business with a tradition of giving great products, 
+                    good value for money and the most trusted service. The Soap Cellar prides itself in ensuring 
+                    all the goods sold exceed all the requirements of international standards and in the future, 
+                    hope to possibly be a leading benchmark for others to follow.
+                </p>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">How to get hold of us</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled text-white">
+                  <li><a href="#" class="text-white">Telephone Number<br/><b>+60 (0) 4 899 2980</b></a></li>
+                  <li>Address<br/><b>22 & 22-1 Lbh Lembah Permai 4<br/>Tanjung Bungah<br/>11200 Penang, Malaysia</b></li>
+                  <li>Fax Number<br/><b>+60 (0) 4 898 2980</b></li>
+                  <li><a href="#" class="text-white">e-Mail Address<br/><b>info@thesoapcellar.com.my</b></a></li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Information</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-white">About Us</a></li>
+                  <li><a href="#" class="text-white">Delivery Information</a></li>
+                  <li><a href="#" class="text-white">Privacy Policy</a></li>
+                  <li><a href="#" class="text-white">Terms and Conditions</a></li>
+                  <li><a href="#" class="text-white">Contact Us</a></li>
+                  <li><a href="#" class="text-white">SiteMap</a></li>
+                  <li><a href="#" class="text-white">Newsletter</a></li>
+                </ul>
+              </div>
+              <hr class="clearfix w-100 d-md-none">
+              <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">Operating Hours</h5>
+                <hr class="bg-light" style="border-top: dotted 1px;">
+                <ul class="list-unstyled text-white">
+                  <li><small>Monday - 11am - 8pm</small></li>
+                  <li><small>Tuesday - CLOSED</small></li>
+                  <li><small>Wednesday - 11am - 8pm</small></li>
+                  <li><small>Thursday - 11am - 8pm</small></li>
+                  <li><small>Friday - 11am - 8pm</small></li>
+                  <li><small>Saturday - 11am - 8pm</small></li>
+                  <li><small>Sunday - CLOSED</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright text-center py-3 bg-dark text-white">
+              © 2019 Copyright: Tan Si Kai. All rights reserved.
+          </div>
         </footer>
     </body>
 </html>
