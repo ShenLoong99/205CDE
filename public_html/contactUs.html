@@ -13,6 +13,38 @@ and open the template in the editor.
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <script src="js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function validateform(){  
+                var name=document.myform.name.value;  
+                var phone=document.myform.phone.value;  
+                var email=document.myform.email.value;
+                var text=document.myform.text.value;
+                var atposition=email.indexOf("@");  
+                var dotposition=email.lastIndexOf(".");
+
+                if (name==null || name==""){  
+                  alert("Name can't be blank");  
+                  return false;  
+                }
+                else if (phone==null || phone==""){  
+                  alert("Phone number can't be blank");  
+                  return false;  
+                }
+                else if (email==null || email==""){  
+                  alert("Email address can't be blank");  
+                  return false;  
+                }
+                else if (text==null || text==""){  
+                  alert("Message can't be blank");  
+                  return false;  
+                }
+
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                    alert("Please enter a valid e-mail address");  
+                    return false;  
+                }  
+            }  
+        </script>
     </head>
     <body style="background: url(picture/WEBSITE-WOOD-BACKGROUND.jpg)">
         <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -46,15 +78,15 @@ and open the template in the editor.
             <h3 class="text-center">Contact us</h3><br />
 
             <div class="row">
-              <div class="col-md-8">
-                  <form action="/post" method="post">
-                    <input class="form-control" name="name" placeholder="Name..." /><br />
-                    <input class="form-control" name="phone" placeholder="Phone..." /><br />
-                    <input class="form-control" name="email" placeholder="E-mail..." /><br />
-                    <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
-                    <input class="btn" style="background: #459ba7; color: #fff;" type="submit" value="Send" /><br /><br />
-                  </form>
-              </div>
+                <div class="col-md-8">
+                    <form name="myform" onsubmit="return validateform()" action="" method="post">
+                        <input class="form-control" autocomplete="off" type="text" name="name" placeholder="Name..." /><br />
+                        <input class="form-control" autocomplete="off" type="text" name="phone" pattern="^(\+?6?01)[0-46-9]-*[0-9]{7,8}$" placeholder="Phone..." /><br />
+                        <input class="form-control" autocomplete="off" type="email" name="email" placeholder="E-mail..." /><br />
+                        <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
+                        <input class="btn" style="background: #459ba7; color: #fff;" type="submit" value="Send" />
+                    </form><br /><br />
+                </div>
               <div class="col-md-4">
                 <b>Customer service:</b> <br />
                 Phone: +60 19 593 7799<br />

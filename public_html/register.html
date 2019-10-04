@@ -83,6 +83,71 @@ and open the template in the editor.
                 color: #495057;
             }
         </style>
+        <script>
+            function validateform(){  
+                var fname=document.myform.fname.value;  
+                var lname=document.myform.lname.value;
+                var password1=document.myform.password.value;
+                var password2=document.myform.password2.value;
+                var email=document.myform.email.value;
+                var atposition=email.indexOf("@");  
+                var dotposition=email.lastIndexOf(".");
+                var phone=document.myform.phone.value;
+                var ddl = document.getElementById("ddl");
+                var option = ddl.options[ddl.selectedIndex].value;
+                var ans=document.myform.text.value; 
+
+                if (fname==null || fname==""){  
+                    alert("First name can't be blank");  
+                    return false;  
+                }
+                else if (lname==null || lname==""){  
+                    alert("Last name can't be blank");  
+                    return false;  
+                }  
+                else if (password1==null || password1=="" || password2==null || password2=="") {
+                    alert("Password can't be blank");  
+                    return false; 
+                }
+                else if (email==null || email=="") {
+                    alert("Email address can't be blank");  
+                    return false; 
+                }
+                else if (phone==null || phone=="") {
+                    alert("Phone number can't be blank");  
+                    return false;
+                }
+                else if (option=="Please select your Sequrity Question") {
+                    alert("You must choose an option from dropdown list");  
+                    return false;
+                }
+                else if (ans==null || ans=="") {
+                    alert("Answer can't be blank");
+                    return false;
+                }
+                
+                if(password1==password2){  
+                    return true;  
+                }  
+                else{  
+                    alert("password must be same!");  
+                    return false;  
+                }
+
+                if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                    alert("Please enter a valid e-mail address");  
+                    return false;  
+                } 
+                
+                if (phone.value == phoneno){
+                    return true;
+                }
+                else {
+                    alert("Invalid phone number! Please enter again...");
+                    return false;
+                }
+            }  
+        </script>
     </head>
     <body style="background: url(picture/WEBSITE-WOOD-BACKGROUND.jpg)">
         <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark">
@@ -120,19 +185,20 @@ and open the template in the editor.
                     </div>
                     <div class="col-md-9 register-right">
                         <h3 class="register-heading text-white">Register</h3>
+                        <form name="myform" onsubmit="return validateform()" action="" method="post">
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                    <input type="text" name="fname" class="form-control" placeholder="First Name *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                    <input type="text" name="lname" class="form-control" placeholder="Last Name *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" value="" />
+                                    <input type="password" name="password" class="form-control" placeholder="Password *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                    <input type="password" name="password2" class="form-control"  placeholder="Confirm Password *" value="" />
                                 </div>
                                 <div class="form-group">
                                     <div class="maxl text-white">
@@ -149,13 +215,13 @@ and open the template in the editor.
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                    <input type="text" name="phone" pattern="^(\+?6?01)[0-46-9]-*[0-9]{7,8}$" class="form-control" placeholder="Your Phone *" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control">
+                                    <select class="form-control" id="ddl">
                                         <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
                                         <option>What is your Birthdate?</option>
                                         <option>What is Your old Phone Number</option>
@@ -163,11 +229,12 @@ and open the template in the editor.
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                                    <input type="text" name="text" class="form-control" placeholder="Enter Your Answer *" value="" />
                                 </div>
                                 <input type="submit" class="btnRegister"  value="Register"/>
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
